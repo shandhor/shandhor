@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohammed Shandhor — Senior Software Engineer</title>
+  <meta name="description" content="Mohammed Shandhor — Senior Software Engineer | Solution Architect | Team Lead — .NET, Angular, Azure" />
+  <!-- Tailwind CDN (for quick prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles */
+    :root{
+      --accent:#06b6d4; /* cyan-500 */
+      --bg:#0b1220;
+      --card:#0f1724;
+    }
+    html,body { background: linear-gradient(180deg,#071023 0%, #081229 60%); }
+    .fade-in { opacity:0; transform: translateY(10px); transition: all .6s ease-out; }
+    .fade-in.visible { opacity:1; transform: translateY(0); }
+    /* timeline */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    }
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 8px; height:8px }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 999px }
+  </style>
+</head>
+<body class="text-slate-200 antialiased leading-relaxed">
+
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <!-- simple logo -->
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-semibold text-black">
+        MS
+      </div>
+      <div>
+        <h1 class="text-lg font-bold">Mohammed Shandhor Alyafei</h1>
+        <p class="text-sm text-slate-400">Senior Software Engineer • Solution Architect • Team Lead</p>
+      </div>
+    </div>
+
+    <nav class="flex items-center gap-3">
+      <a href="#projects" class="text-sm hover:underline">المشاريع</a>
+      <a href="#experience" class="text-sm hover:underline">الخبرات</a>
+      <a href="#contact" class="text-sm hover:underline">تواصل</a>
+      <a href="assets/Mohammed_Shandhor_CV.pdf" download class="ml-3 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-slate-800 hover:bg-slate-700">
+        تنزيل السيرة الذاتية
+      </a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pb-16">
+
+    <!-- HERO -->
+    <section id="hero" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center py-12">
+      <div class="md:col-span-2">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">مرحبا — أنا <span style="color:var(--accent)">محمد شندور</span></h2>
+        <p class="mt-4 text-slate-300 max-w-2xl">
+          مهندس برمجيات أول ومهندس حلول مع خبرة واسعة في تصميم وبناء أنظمة قابلة للتوسع باستخدام 
+          <strong>.NET, Angular, Azure</strong> والعديد من التقنيات الحديثة مثل Microservices، ABP وذكاء اصطناعي (RAG, LangChain).
+        </p>
+
+        <div class="mt-6 flex gap-3 flex-wrap">
+          <a href="#projects" class="px-4 py-2 rounded-md border border-slate-700">مشاريعي</a>
+          <a href="#contact" class="px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-600 text-black">تواصل معي</a>
+          <a href="https://linkedin.com/in/mohammed-shandhor-b0b94b58" target="_blank" class="px-4 py-2 rounded-md border border-slate-700">LinkedIn</a>
+          <a href="https://codecanyon.net/user/shandhor/portfolio" target="_blank" class="px-4 py-2 rounded-md border border-slate-700">Codecanyon</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
+            <div class="text-slate-300 text-xs">الخبرة</div>
+            <div class="font-semibold text-lg">8+ سنوات</div>
+          </div>
+          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
+            <div class="text-slate-300 text-xs">التقنيات</div>
+            <div class="font-semibold text-lg">.NET • Angular</div>
+          </div>
+          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
+            <div class="text-slate-300 text-xs">الموقع</div>
+            <div class="font-semibold text-lg">Riyadh, KSA</div>
+          </div>
+          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
+            <div class="text-slate-300 text-xs">البريد</div>
+            <div class="font-semibold text-lg">mohammedshan92@hotmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-4">
+        <!-- avatar -->
+        <div class="w-48 h-48 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--accent),#0369a1)] flex items-center justify-center text-black font-bold text-xl">
+          MS
+        </div>
+        <div class="text-center text-slate-400 text-sm max-w-xs">
+          مهندس حلول وخبير بناء منصات إلكترونية، أنظمة ERP، وتكامل خدمات سحابية.
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mt-12">
+      <div class="bg-[rgba(255,255,255,0.02)] p-6 rounded-xl grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold">نبذة قصيرة</h3>
+          <p class="mt-3 text-slate-300">
+            أنا مهندس برمجيات أول ومهندس حلول، أمتلك خبرة في تصميم وتنفيذ أنظمة الويب والهواتف والسحابة. 
+            عملت مع فرق متعددة وقادت مشاريع ERP ومنصات إلكترونية (Monafsat, ClickShare, Horizon ERP...) — التركيز على جودة الكود، الأداء، والأمن.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold">المهارات التقنية</h4>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>• Backend: C#, .NET Core, Web API, Entity Framework</li>
+            <li>• Frontend: Angular, TypeScript, HTML, Tailwind</li>
+            <li>• Cloud & DevOps: Azure, Docker, CI/CD</li>
+            <li>• DB & Search: SQL Server, Elasticsearch</li>
+            <li>• Messaging: RabbitMQ, Redis</li>
+            <li>• AI & RAG: OpenAI, LangChain, Azure AI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="mt-12 relative">
+      <h3 class="text-2xl font-bold mb-6">الخبرات المهنية</h3>
+
+      <div class="space-y-8">
+        <!-- SKYsoft -->
+        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-semibold">Team Lead & Senior .Net Developer — SKYsoft</h4>
+              <div class="text-slate-400 text-sm">Apr 2025 – Present • Remote</div>
+            </div>
+            <div class="text-sm text-slate-300">قيادة فريق • CI/CD • Architecture</div>
+          </div>
+          <p class="mt-3 text-slate-300 text-sm">إدارة فريق، مراجعة كود، تصميم حلول، وتنفيذ ممارسات DevOps لتسليم سريع ومستقر.</p>
+        </article>
+
+        <!-- Horizon -->
+        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-semibold">Senior .Net Developer — Horizon Group</h4>
+              <div class="text-slate-400 text-sm">Aug 2023 – Apr 2025 • Riyadh</div>
+            </div>
+            <div class="text-sm text-slate-300">ERP • Angular • .NET</div>
+          </div>
+          <p class="mt-3 text-slate-300 text-sm">عملت على Horizon ERP وأنظمة نقل وتكامل مع MVC وSQL Server.</p>
+        </article>
+
+        <!-- Bwareq -->
+        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-semibold">Senior Software Engineer — Bwareq</h4>
+              <div class="text-slate-400 text-sm">Dec 2021 – Aug 2023 • Riyadh</div>
+            </div>
+            <div class="text-sm text-slate-300">Monafsat • ClickShare</div>
+          </div>
+          <p class="mt-3 text-slate-300 text-sm">بناء منصات من الصفر باستخدام Angular و .NET Core ومحركات بحث (Elasticsearch).</p>
+        </article>
+
+        <!-- Maalem -->
+        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-semibold">Full Stack Developer — Maalem Financing</h4>
+              <div class="text-slate-400 text-sm">Sep 2019 – Sep 2021 • Riyadh</div>
+            </div>
+            <div class="text-sm text-slate-300">Mobile • Ionic • eCommerce</div>
+          </div>
+          <p class="mt-3 text-slate-300 text-sm">تطوير تطبيقات موبايل ومنصات eCommerce ولوحات تحكم إدارية.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-12">
+      <h3 class="text-2xl font-bold mb-6">مختارات من المشاريع</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Monafsat -->
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <h4 class="font-semibold">Monafsat</h4>
+          <p class="text-slate-300 text-sm mt-2">منصة بحث وإعلانات — Angular, .NET Core, Elasticsearch</p>
+          <div class="mt-3 flex gap-2">
+            <a href="https://monafsat.net" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800">زيارة الموقع</a>
+          </div>
+        </div>
+
+        <!-- ClickShare -->
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <h4 class="font-semibold">ClickShare</h4>
+          <p class="text-slate-300 text-sm mt-2">متجر إلكتروني متعدد اللغات — Angular, .NET Core, ABP</p>
+          <div class="mt-3 flex gap-2">
+            <a href="https://home.clickshare.store/en" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800">زيارة</a>
+          </div>
+        </div>
+
+        <!-- Codecanyon -->
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <h4 class="font-semibold">قوالب على Codecanyon</h4>
+          <p class="text-slate-300 text-sm mt-2">نماذج جاهزة ومنصات تم نشرها على Codecanyon.</p>
+          <div class="mt-3 flex gap-2">
+            <a href="https://codecanyon.net/user/shandhor/portfolio" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800">عرض البورتفوليو</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section id="certs" class="mt-12">
+      <h3 class="text-2xl font-bold mb-6">الشهادات</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <div class="font-semibold">Analyzing & Visualizing Data with Power BI</div>
+          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
+        </div>
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <div class="font-semibold">Querying with Transact-SQL</div>
+          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
+        </div>
+        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
+          <div class="font-semibold">Microsoft Data Science Orientation</div>
+          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-12">
+      <h3 class="text-2xl font-bold mb-6">تواصل معي</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-[rgba(255,255,255,0.02)] p-6 rounded-lg">
+          <h4 class="font-semibold">معلومات الاتصال</h4>
+          <p class="text-slate-300 mt-3">📧 mohammedshan92@hotmail.com</p>
+          <p class="text-slate-300">📞 +966561316069</p>
+          <p class="text-slate-300 mt-3">Riyadh, Saudi Arabia</p>
+
+          <div class="mt-4 flex gap-3">
+            <a href="mailto:mohammedshan92@hotmail.com" class="px-4 py-2 rounded bg-slate-800">أرسل بريد</a>
+            <a href="https://linkedin.com/in/mohammed-shandhor-b0b94b58" target="_blank" class="px-4 py-2 rounded border">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="bg-[rgba(255,255,255,0.02)] p-6 rounded-lg" onsubmit="event.preventDefault(); alert('شكراً! — سأستلم رسالتك عبر البريد.');">
+          <label class="block text-sm">الاسم</label>
+          <input required class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" placeholder="اسمك" />
+          <label class="block text-sm mt-3">البريد الإلكتروني</label>
+          <input required type="email" class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" placeholder="email@example.com" />
+          <label class="block text-sm mt-3">الرسالة</label>
+          <textarea required class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" rows="4" placeholder="أخبرني بالمشروع أو فرصة العمل"></textarea>
+          <div class="mt-4">
+            <button class="px-4 py-2 rounded bg-gradient-to-r from-cyan-500 to-blue-600 text-black">أرسل</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="mt-12 border-t border-slate-800 pt-6 text-center text-slate-500">
+      © <span id="year"></span> Mohammed Shandhor — Built with HTML + Tailwind
+    </footer>
+  </main>
+
+  <script>
+    // show year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
