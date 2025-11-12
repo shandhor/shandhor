@@ -1,247 +1,397 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mohammed Shandhor — Senior Software Engineer & Solution Architect</title>
-  <meta name="description" content="Senior Software Engineer & Solution Architect experienced in .NET, Angular, Azure, Microservices, and AI solutions." />
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --accent: #06b6d4;
-      --bg: #0b1220;
-      --card: #0f1724;
-    }
-    html, body {
-      background: linear-gradient(180deg, #071023 0%, #081229 60%);
-    }
-    .fade-in { opacity: 0; transform: translateY(10px); transition: all .6s ease-out; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    ::-webkit-scrollbar { width: 8px; height:8px }
-    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 999px }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Shandhor Alyafei | Senior Software Engineer | Solution Architect</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Set Inter font for modern, clean look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #1f2937;
+        }
+    </style>
+    <!-- Configure Tailwind for custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af', // Dark Blue
+                        'secondary-gray': '#4b5563', // Medium Gray
+                        'accent-yellow': '#facc15', // Accent Yellow
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="text-slate-200 antialiased leading-relaxed">
+<body class="antialiased">
 
-  <!-- HEADER -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-semibold text-black">
-        MS
-      </div>
-      <div>
-        <h1 class="text-lg font-bold">Mohammed Shandhor Alyafei</h1>
-        <p class="text-sm text-slate-400">Senior Software Engineer • Solution Architect • Team Lead</p>
-      </div>
-    </div>
-
-    <nav class="flex items-center gap-3">
-      <a href="#projects" class="text-sm hover:underline">Projects</a>
-      <a href="#experience" class="text-sm hover:underline">Experience</a>
-      <a href="#contact" class="text-sm hover:underline">Contact</a>
-      <a href="assets/Mohammed_Shandhor_CV.pdf" download class="ml-3 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-slate-800 hover:bg-slate-700">
-        Download CV
-      </a>
-    </nav>
-  </header>
-
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6 pb-16">
-
-    <!-- HERO -->
-    <section id="hero" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center py-12">
-      <div class="md:col-span-2">
-        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          Hi, I'm <span style="color:var(--accent)">Mohammed Shandhor</span>
-        </h2>
-        <p class="mt-4 text-slate-300 max-w-2xl">
-          Senior Software Engineer and Solution Architect with strong experience in designing, building, and deploying scalable enterprise systems using
-          <strong>.NET, Angular, Azure, and Microservices</strong>. Passionate about clean architecture, performance, and AI-driven solutions (RAG, LangChain, OpenAI).
-        </p>
-
-        <div class="mt-6 flex gap-3 flex-wrap">
-          <a href="#projects" class="px-4 py-2 rounded-md border border-slate-700">View Projects</a>
-          <a href="#contact" class="px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-600 text-black">Contact Me</a>
-          <a href="https://linkedin.com/in/mohammed-shandhor-b0b94b58" target="_blank" class="px-4 py-2 rounded-md border border-slate-700">LinkedIn</a>
-          <a href="https://codecanyon.net/user/shandhor/portfolio" target="_blank" class="px-4 py-2 rounded-md border border-slate-700">Codecanyon</a>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-primary-blue">
+                Mohammed Shandhor
+            </h1>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-6 text-lg font-medium">
+                <a href="#about" class="hover:text-primary-blue transition duration-300">About Me</a>
+                <a href="#skills" class="hover:text-primary-blue transition duration-300">Skills</a>
+                <a href="#experience" class="hover:text-primary-blue transition duration-300">Experience</a>
+                <a href="#projects" class="hover:text-primary-blue transition duration-300">Projects</a>
+                <a href="#certificates" class="hover:text-primary-blue transition duration-300">Certificates</a>
+                <a href="#contact" class="hover:text-primary-blue transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#about" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">About Me</a>
+            <a href="#skills" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">Skills</a>
+            <a href="#experience" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">Projects</a>
+            <a href="#certificates" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">Certificates</a>
+            <a href="#contact" class="block py-2 px-4 text-secondary-gray hover:bg-gray-100">Contact</a>
         </div>
+    </header>
 
-        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
-            <div class="text-slate-300 text-xs">Experience</div>
-            <div class="font-semibold text-lg">8+ Years</div>
-          </div>
-          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
-            <div class="text-slate-300 text-xs">Main Stack</div>
-            <div class="font-semibold text-lg">.NET • Angular</div>
-          </div>
-          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
-            <div class="text-slate-300 text-xs">Location</div>
-            <div class="font-semibold text-lg">Riyadh, KSA</div>
-          </div>
-          <div class="bg-[rgba(255,255,255,0.03)] p-3 rounded-lg">
-            <div class="text-slate-300 text-xs">Email</div>
-            <div class="font-semibold text-lg">mohammedshan92@hotmail.com</div>
-          </div>
-        </div>
-      </div>
+    <main>
+        <!-- Hero/About Section -->
+        <section id="about" class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div class="flex flex-col lg:flex-row items-center lg:space-x-12">
+                <div class="lg:w-2/3 text-center lg:text-left mb-10 lg:mb-0">
+                    <p class="text-lg text-secondary-gray mb-2">Hello, I am</p>
+                    <h2 class="text-5xl sm:text-6xl font-extrabold mb-4 leading-tight text-gray-900">
+                        Mohammed Shandhor Alyafei
+                    </h2>
+                    <p class="text-3xl font-semibold text-primary-blue mb-6">
+                        Senior Software Engineer | Solution Architect | Team Lead
+                    </p>
+                    <p class="text-xl text-secondary-gray leading-relaxed max-w-2xl lg:mx-0 mx-auto">
+                        Senior Software Engineer and Solution Architect with several years of experience delivering scalable, secure, and high-performance solutions across web, mobile, desktop, and cloud platforms. Proficient in .NET, Angular, SQL Server, Azure, and modern development practices with proven leadership in full-cycle software development.
+                    </p>
+                    <div class="mt-8 flex justify-center lg:justify-start space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-primary-blue text-white font-bold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                            View My Work
+                        </a>
+                        <a href="mailto:mohammedshan92@hotmail.com" class="px-6 py-3 bg-white border border-primary-blue text-primary-blue font-bold text-lg rounded-lg shadow-lg hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 flex justify-center">
+                    <!-- Placeholder for professional photo -->
+                    <div class="w-64 h-64 bg-gray-300 rounded-full flex items-center justify-center shadow-xl border-4 border-white overflow-hidden">
+                        <span class="text-xl text-gray-600 font-bold">Professional Photo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="flex flex-col items-center gap-4">
-        <div class="w-48 h-48 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--accent),#0369a1)] flex items-center justify-center text-black font-bold text-xl">
-          MS
-        </div>
-        <div class="text-center text-slate-400 text-sm max-w-xs">
-          Solution Architect specializing in ERP, SaaS, and AI-integrated cloud platforms.
-        </div>
-      </div>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Technical & Architectural Skills</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- ABOUT -->
-    <section id="about" class="mt-12">
-      <div class="bg-[rgba(255,255,255,0.02)] p-6 rounded-xl grid md:grid-cols-3 gap-6">
-        <div class="md:col-span-2">
-          <h3 class="text-2xl font-bold">About Me</h3>
-          <p class="mt-3 text-slate-300">
-            I’m a results-driven software engineer and solution architect with proven expertise in full-stack development, distributed systems, and cloud computing.
-            I have led technical teams, designed enterprise-level solutions, and built successful products such as <strong>Monafsat, ClickShare, and Horizon ERP</strong>.
-          </p>
-        </div>
-        <div>
-          <h4 class="font-semibold">Core Skills</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li>• Backend: C#, .NET Core, Web API, Entity Framework</li>
-            <li>• Frontend: Angular, TypeScript, Tailwind, HTML</li>
-            <li>• Cloud & DevOps: Azure, Docker, CI/CD</li>
-            <li>• Databases: SQL Server, Elasticsearch</li>
-            <li>• Messaging: RabbitMQ, Redis</li>
-            <li>• AI: OpenAI, LangChain, Azure AI</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+                    <!-- Web Development Category -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Web Development (Web & Frameworks)</h3>
+                        <p class="text-secondary-gray text-lg">
+                            ASP.Net, ASP.NET Core, Angular, Web Forms, MVC, TypeScript, Entity Framework Core, HTML, CSS, Bootstrap, JavaScript, jQuery, ABP Framework.
+                        </p>
+                    </div>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="mt-12 relative">
-      <h3 class="text-2xl font-bold mb-6">Professional Experience</h3>
+                    <!-- Architecture & Programming Category -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Software Engineering & Design</h3>
+                        <p class="text-secondary-gray text-lg">
+                            C#, VB (OOP, SOLID), Monolithic, Microservices, Clean Architecture, DDD (Domain-Driven Design), Multi-Tenancy, REST API, GraphQL, JWT Authentication.
+                        </p>
+                    </div>
 
-      <div class="space-y-8">
-        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
-          <h4 class="font-semibold">Team Lead & Senior .Net Developer — SKYsoft</h4>
-          <p class="text-slate-400 text-sm">Apr 2025 – Present • Remote</p>
-          <p class="mt-3 text-slate-300 text-sm">
-            Leading a cross-functional development team, managing architecture decisions, sprint planning, and CI/CD automation for enterprise projects.
-          </p>
-        </article>
+                    <!-- Databases & Cloud Category -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Databases & Cloud (Azure/DevOps)</h3>
+                        <p class="text-secondary-gray text-lg">
+                            SQL Server, Azure SQL, Firebase, Elasticsearch, Power BI. Microsoft Azure (Cloud Services, VMs, WebApps), DevOps, Git, Docker.
+                        </p>
+                    </div>
 
-        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
-          <h4 class="font-semibold">Senior .Net Developer — Horizon Group</h4>
-          <p class="text-slate-400 text-sm">Aug 2023 – Apr 2025 • Riyadh, KSA</p>
-          <p class="mt-3 text-slate-300 text-sm">
-            Delivered Horizon ERP solutions and backend APIs using .NET, MVC, and SQL Server; collaborated with cross-team stakeholders.
-          </p>
-        </article>
+                    <!-- AI & Distributed Systems Category -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">AI & Distributed Systems</h3>
+                        <p class="text-secondary-gray text-lg">
+                            RAG (Retrieval-Augmented Generation), Copilot, OpenAl, LangChain, Azure Al, ChatGPT. Microservices Support, Distributed Event Bus, Redis, RabbitMQ.
+                        </p>
+                    </div>
 
-        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
-          <h4 class="font-semibold">Senior Software Engineer — Bwareq</h4>
-          <p class="text-slate-400 text-sm">Dec 2021 – Aug 2023 • Riyadh, KSA</p>
-          <p class="mt-3 text-slate-300 text-sm">
-            Built Monafsat and ClickShare platforms using Angular, .NET Core, and Elasticsearch (SEO optimized & Google-ranked).
-          </p>
-        </article>
+                    <!-- Mobile Development Category -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Mobile & Desktop Development</h3>
+                        <p class="text-secondary-gray text-lg">
+                            lonic with Angular, Android, iOS, Windows Phone. .NET (WinForms, UWP with C# and XAML).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <article class="bg-[rgba(255,255,255,0.02)] p-5 rounded-lg fade-in">
-          <h4 class="font-semibold">Full Stack Developer — Maalem Financing</h4>
-          <p class="text-slate-400 text-sm">Sep 2019 – Sep 2021 • Riyadh, KSA</p>
-          <p class="mt-3 text-slate-300 text-sm">
-            Developed mobile and web applications, including “TruckOne” and “Eco” eCommerce platform using .NET and Angular.
-          </p>
-        </article>
-      </div>
-    </section>
+        <!-- Experience Section -->
+        <section id="experience" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Professional Experience</h2>
+            
+            <div class="space-y-12 max-w-4xl mx-auto">
+                
+                <!-- Position 1: Team Lead & Senior .Net Engineer -->
+                <div class="relative border-l-4 border-primary-blue pl-8 pb-8">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-blue rounded-full"></div>
+                    <p class="text-sm font-semibold text-accent-yellow">April 2025 - Present</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-1">Team Lead & Senior .Net Engineer | SKYsoft</h3>
+                    <p class="text-lg text-secondary-gray mb-4">Remote</p>
+                    <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
+                        <li>Led a cross-functional development team to deliver high-quality software projects on time.</li>
+                        <li>Managed sprint planning, backlog refinement, and daily stand-ups using Agile/Scrum methodology.</li>
+                        <li>Conducted code reviews to ensure best practices, maintainability, and architectural standards compliance.</li>
+                        <li>Facilitated architectural discussions and technical decision-making across multiple projects.</li>
+                    </ul>
+                </div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="mt-12">
-      <h3 class="text-2xl font-bold mb-6">Highlighted Projects</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <h4 class="font-semibold">Monafsat</h4>
-          <p class="text-slate-300 text-sm mt-2">B2B bidding & job platform — Angular, .NET Core, Elasticsearch</p>
-          <a href="https://monafsat.net" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800 mt-3 inline-block">Visit</a>
+                <!-- Position 2: Senior .Net Engineer -->
+                <div class="relative border-l-4 border-primary-blue pl-8 pb-8">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-blue rounded-full"></div>
+                    <p class="text-sm font-semibold text-accent-yellow">August 2023 - April 2025</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-1">Senior .Net Engineer | Horizon Group</h3>
+                    <p class="text-lg text-secondary-gray mb-4">Riyadh, Saudi Arabia</p>
+                    <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
+                        <li>Worked on the Horizon ERP system (including HR, Moard, Transportation, Accounting, Financing).</li>
+                        <li>Provided Full Stack solutions using .NET, Web Forms, API, and SQL.</li>
+                        <li>Acted as a Backend Developer for the Sayaratech application using MVC and SQL Server.</li>
+                        <li>Built the Care Store platform from scratch using Angular and .NET Core.</li>
+                    </ul>
+                </div>
+
+                <!-- Position 3: Senior Software Engineer -->
+                <div class="relative border-l-4 border-primary-blue pl-8 pb-8">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-blue rounded-full"></div>
+                    <p class="text-sm font-semibold text-accent-yellow">December 2021 - August 2023</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-1">Senior Software Engineer | Bwareq Company</h3>
+                    <p class="text-lg text-secondary-gray mb-4">Riyadh, Saudi Arabia</p>
+                    <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
+                        <li>Built the **Monafsat Platform** from scratch using Angular, .NET Core, SQL, and Elasticsearch (ranked top 2 on Google in its domain).</li>
+                        <li>Built the **ClickShare Platform** using Angular, .NET Core, SQL, and ABP.</li>
+                    </ul>
+                </div>
+                
+                <!-- Additional experiences can be added here with the same structure -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Key Projects & Activities</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1: Monafsat Platform -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">Monafsat Platform</h3>
+                        <p class="text-sm text-secondary-gray mb-4">.Net Core / Angular / SQL / Elasticsearch</p>
+                        <p class="text-gray-700 mb-4">Built the platform from scratch; ranked top 2 on Google in its domain.</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Project (Link 1) &rarr;</a>
+                    </div>
+
+                    <!-- Project 2: Sayaratech App -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">Sayaratech App Backend</h3>
+                        <p class="text-sm text-secondary-gray mb-4">MVC / SQL Server</p>
+                        <p class="text-gray-700 mb-4">Developed the Backend for the Sayaratech application.</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Project 3: TruckOne & Truck Driver Mobile Apps -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">TruckOne & Truck Driver Mobile Apps</h3>
+                        <p class="text-sm text-secondary-gray mb-4">Ionic / Angular</p>
+                        <p class="text-gray-700 mb-4">Developed mobile applications (TruckOne and Truck Driver) with an administrative control panel.</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Project 4: CRM System (SkyTech & MegaTech) -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">CRM System (SkyTech & MegaTech)</h3>
+                        <p class="text-sm text-secondary-gray mb-4">Angular / .NET / SQL Server</p>
+                        <p class="text-gray-700 mb-4">Built a CRM system from scratch for SkyTech & MegaTech.</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Details &rarr;</a>
+                    </div>
+                    
+                    <!-- Project 5: 7akeem Healthcare App -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">"7akeem" Healthcare App</h3>
+                        <p class="text-sm text-secondary-gray mb-4">UWP / XAML / C# / Azure</p>
+                        <p class="text-gray-700 mb-4">A health application built on the Universal Windows Platform (UWP).</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Details &rarr;</a>
+                    </div>
+                    
+                    <!-- Project 6: Tebyan Quran Project -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">Tebyan Quran Project (Educational System)</h3>
+                        <p class="text-sm text-secondary-gray mb-4">Asp Boilerplate / Angular</p>
+                        <p class="text-gray-700 mb-4">A large educational system project developed using Asp Boilerplate and Angular.</p>
+                        <a href="#" class="text-accent-yellow hover:text-yellow-600 font-medium">View Details &rarr;</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="text-center mt-10">
+                    <p class="text-xl text-gray-700">View more projects on my <a href="#" class="text-primary-blue underline hover:text-blue-700">CodeCanyon profile</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section (NEW) -->
+        <section id="certificates" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Certifications & Training</h2>
+
+            <div class="space-y-6 max-w-4xl mx-auto">
+
+                <!-- Certificate 1 Placeholder -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-accent-yellow">
+                    <div class="sm:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-900">Certified Azure Developer Associate (AZ-204)</h3>
+                        <p class="text-lg text-primary-blue">Microsoft</p>
+                    </div>
+                    <div class="sm:w-1/3 text-left sm:text-right mt-2 sm:mt-0">
+                        <p class="text-secondary-gray font-medium">Issued: Dec 2024</p>
+                        <a href="#" class="text-sm text-primary-blue hover:underline">View Credential &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 Placeholder -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-accent-yellow">
+                    <div class="sm:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-900">Professional Scrum Master I (PSM I)</h3>
+                        <p class="text-lg text-primary-blue">Scrum.org</p>
+                    </div>
+                    <div class="sm:w-1/3 text-left sm:text-right mt-2 sm:mt-0">
+                        <p class="text-secondary-gray font-medium">Issued: Jul 2023</p>
+                        <a href="#" class="text-sm text-primary-blue hover:underline">View Credential &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 Placeholder -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-accent-yellow">
+                    <div class="sm:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-900">Advanced C# and .NET Development</h3>
+                        <p class="text-lg text-primary-blue">LinkedIn Learning</p>
+                    </div>
+                    <div class="sm:w-1/3 text-left sm:text-right mt-2 sm:mt-0">
+                        <p class="text-secondary-gray font-medium">Issued: Mar 2022</p>
+                        <a href="#" class="text-sm text-primary-blue hover:underline">View Credential &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Contact Me</h2>
+            
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-4 border-primary-blue">
+                <p class="text-lg text-secondary-gray mb-6 text-center">
+                    Whether you have a new project, an architectural consultation, or a leadership opportunity, feel free to reach out!
+                </p>
+                
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-blue focus:border-primary-blue">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-blue focus:border-primary-blue">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-blue focus:border-primary-blue"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-primary-blue text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                    <!-- Success/Error Message -->
+                    <div id="status-message" class="mt-4 text-center font-semibold hidden"></div>
+                </form>
+
+                <!-- Direct Contact Info -->
+                <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                    <p class="text-lg font-medium text-gray-800 mb-2">Or contact directly:</p>
+                    <p class="text-primary-blue font-bold text-xl">
+                        <a href="mailto:mohammedshan92@hotmail.com" class="hover:underline">mohammedshan92@hotmail.com</a>
+                    </p>
+                    <p class="text-secondary-gray text-lg mt-1">Phone: +966561316069</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <!-- LinkedIn SVG Icon -->
+                        <a href="#" class="text-primary-blue hover:text-blue-700 text-2xl" aria-label="LinkedIn">
+                            <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.526-4 0v5.604h-3v-11h3v1.765c1.393-2.586 7-2.777 7 2.687v6.548z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Mohammed Shandhor Alyafei. All Rights Reserved.</p>
+            <p class="mt-2 text-gray-400">Designed and developed by Gemini based on the CV.</p>
         </div>
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <h4 class="font-semibold">ClickShare</h4>
-          <p class="text-slate-300 text-sm mt-2">E-commerce platform — Angular, ABP, .NET Core</p>
-          <a href="https://home.clickshare.store/en" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800 mt-3 inline-block">Visit</a>
-        </div>
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <h4 class="font-semibold">Codecanyon Portfolio</h4>
-          <p class="text-slate-300 text-sm mt-2">Custom systems and templates published on Codecanyon.</p>
-          <a href="https://codecanyon.net/user/shandhor/portfolio" target="_blank" class="text-xs px-3 py-1 rounded bg-slate-800 mt-3 inline-block">View</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certs" class="mt-12">
-      <h3 class="text-2xl font-bold mb-6">Certifications</h3>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <div class="font-semibold">Analyzing & Visualizing Data with Power BI</div>
-          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
-        </div>
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <div class="font-semibold">Querying with Transact-SQL</div>
-          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
-        </div>
-        <div class="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg fade-in">
-          <div class="font-semibold">Data Science Orientation</div>
-          <div class="text-slate-400 text-sm mt-1">Microsoft</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="mt-12">
-      <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-[rgba(255,255,255,0.02)] p-6 rounded-lg">
-          <h4 class="font-semibold">Contact Info</h4>
-          <p class="text-slate-300 mt-3">📧 mohammedshan92@hotmail.com</p>
-          <p class="text-slate-300">📞 +966561316069</p>
-          <p class="text-slate-300 mt-3">📍 Riyadh, Saudi Arabia</p>
-          <div class="mt-4 flex gap-3">
-            <a href="mailto:mohammedshan92@hotmail.com" class="px-4 py-2 rounded bg-slate-800">Send Email</a>
-            <a href="https://linkedin.com/in/mohammed-shandhor-b0b94b58" target="_blank" class="px-4 py-2 rounded border">LinkedIn</a>
-          </div>
-        </div>
-        <form class="bg-[rgba(255,255,255,0.02)] p-6 rounded-lg" onsubmit="event.preventDefault(); alert('Thank you! I’ll get back to you soon.');">
-          <label class="block text-sm">Name</label>
-          <input required class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" placeholder="Your name" />
-          <label class="block text-sm mt-3">Email</label>
-          <input required type="email" class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" placeholder="email@example.com" />
-          <label class="block text-sm mt-3">Message</label>
-          <textarea required class="w-full mt-2 p-2 rounded bg-slate-900 border border-slate-800" rows="4" placeholder="Let's discuss your project or opportunity"></textarea>
-          <div class="mt-4">
-            <button class="px-4 py-2 rounded bg-gradient-to-r from-cyan-500 to-blue-600 text-black">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <footer class="mt-12 border-t border-slate-800 pt-6 text-center text-slate-500">
-      © <span id="year"></span> Mohammed Shandhor — Built with HTML + Tailwind
     </footer>
-  </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('visible');
-      });
-    }, {threshold: 0.12});
-    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
-  </script>
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Function to handle the mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Function to handle the contact form submission (simulation)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const statusMessage = document.getElementById('status-message');
+            
+            // Simulate a successful submission
+            statusMessage.classList.remove('hidden', 'text-red-500');
+            statusMessage.classList.add('text-green-600', 'bg-green-100', 'p-3', 'rounded-lg');
+            statusMessage.textContent = 'Thank you! Your message has been received successfully. I will get back to you shortly.';
+            
+            // Hide the message after 5 seconds
+            setTimeout(() => {
+                statusMessage.classList.add('hidden');
+                statusMessage.classList.remove('bg-green-100', 'p-3', 'rounded-lg');
+            }, 5000);
+
+            // Clear the form fields
+            e.target.reset();
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
